@@ -6,7 +6,7 @@ import argparse
 import pycrfsuite
 
 parser = argparse.ArgumentParser(description='Word Segmentation for Burmese language using CRF model')
-parser.add_argument('-i', '--input', type=str, help='input file', required=True)
+parser.add_argument('-i', '--input', type=str, help='input file', required=False)
 parser.add_argument('-o', '--output', type=str, default='./segmented.txt', help='output file', required=False)
 
 args = parser.parse_args()
@@ -71,18 +71,15 @@ def create_char_features(sentence, i):
 
 
 
-def create_sentence_features(prepared_sentence):
+def create_word_features(prepared_sentence):
     return [create_char_features(prepared_sentence, i) for i in range(len(prepared_sentence))]
 
-def create_sentence_labels(prepared_sentence):
-    return [str(part[1]) for part in prepared_sentence]
-
-#segment sentence or word by trained model
-def segment_sentence(sentence):
+#segment word by trained model
+def segment_word(sentence):
     #remove white spaces from sentence
     sent = sentence.replace(" ", "")
     #tag sentence by trained model or create sentence features 
-    prediction = tagger.tag(create_sentence_features(sent))
+    prediction = tagger.tag(create_word_features(sent))
     #assign 'complete' to empty string 
     complete = ""
     #apply for loop on taged sentence
@@ -93,17 +90,22 @@ def segment_sentence(sentence):
         #if label of character in sentence is 0 then add that word as it is into complete
         else:
             complete += sent[i]
+    #print(type(sent))
     return complete
-    
-with open(inputFile, encoding='utf-8') as f:
-  for line in f:
-    l1 = ""
-    l2 = ""
-    if len(line)<=5:
-      l1=line
-      #outFile.write(line)
-      outFile.write(l1)
-    else:
-      seg = segment_sentence(line)
-      l2 = seg
-      outFile.write(l2)
+
+def main():    
+	with open(inputFile, encoding='utf-8') as f:
+	  for line in f:
+	    l1 = ""
+	    l2 = ""
+	    if len(line)<=5:
+	      l1=line
+	      #outFile.write(line)
+	      outFile.write(l1)
+	    else:
+	      seg = segment_word(line)
+	      l2 = seg
+	      outFile.write(l2)
+
+if __name__ == "__main__":
+    main ()	      
