@@ -1,6 +1,6 @@
 # Myanmar Word Segmentation using Conditional Random Field
 
-Word Segmentation for Myanmar Language using Conditional Random Fields
+Word Segmentation for Myanmar Language using Conditional Random Fields ( with character features )
 
 - Precision: 0.9593931034482759
 - Recall: 0.9539719113451832
@@ -15,7 +15,7 @@ It was trained and tested on myPOS corpus version 3.0[1] based on the study of W
 - Myan-word-breaker[4] : Statistical approach based word segmentation
 
 - pyidaungsu[5] : Python text processing library for Myanmar language <br />
-( Many future works and still under development. It also used character level CRF model for word segmentation. )
+( Many future works and still under development. It also used CRF model for word segmentation. )
 
 ## Download repo
 
