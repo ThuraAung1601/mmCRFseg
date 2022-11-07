@@ -1,4 +1,4 @@
-# Myanmar Word Segmentation using Conditional Random Field
+# mmCRFseg : Myanmar Word Segmentation using Conditional Random Field
 
 Word Segmentation for Myanmar Language using Conditional Random Fields ( with character features )
 
@@ -54,7 +54,7 @@ optional arguments:
 တခြား Program ​တွေထဲ ထည့်သုံးချင်ရင် ဒီလို ​ခေါ် သုံးလို့ ရပါတယ်။
 
 ```{r, engine='bash', count_lines}
-from seg import segment_sentence
+from seg import segment_word
 sentence = "ဒီနေ့ကမ္ဘာ့စံချိန်သစ်တင်ခဲ့တယ်။"
 segment_word(sentence)
 ```
@@ -63,7 +63,7 @@ Output : "ဒီ နေ့ ကမ္ဘာ့ စံချိန် သစ်တ
 
 
 ```{r, engine='bash', count_lines}
-from seg import segment_sentence
+from seg import segment_word
 sentence = "မိုးရွာထားလို့အခန်းထဲမှာစိုထိုင်းထိုင်းဖြစ်နေတယ်"
 segment_word(sentence)
 ```
