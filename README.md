@@ -8,7 +8,7 @@ Word Segmentation for Myanmar Language using Conditional Random Fields ( with ch
 
 It was trained and tested on myPOS corpus version 3.0[1] based on the study of Win Pa Pa et al.[2]. This tool is built just for educational purpose only.
 
-## Other useful text segmentation tools
+## Other useful text segmentation tools for Myanmar Langauge
 - myWord[3] : syllable, word, sub_word and phrase segmenter for Burmese <br />
 ( Highly recommend : **most accurate because of its large dictionary sizes, different approaches for different tokens units** )
 
@@ -37,12 +37,26 @@ pip install -r python-crfsuite
 python ./seg.py -i test.txt -o out.txt
 ```
 
+```{r, engine='bash', count_lines}
+$ python seg.py --help
+usage: seg.py [-h] [-i INPUT] [-o OUTPUT]
+
+Word Segmentation for Burmese language using CRF model
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        input file
+  -o OUTPUT, --output OUTPUT
+                        output file
+```
+
 တခြား Program ​တွေထဲ ထည့်သုံးချင်ရင် ဒီလို ​ခေါ် သုံးလို့ ရပါတယ်။
 
 ```{r, engine='bash', count_lines}
 from seg import segment_sentence
 sentence = "ဒီနေ့ကမ္ဘာ့စံချိန်သစ်တင်ခဲ့တယ်။"
-segment_sentence(sentence)
+segment_word(sentence)
 ```
 
 Output : "ဒီ နေ့ ကမ္ဘာ့ စံချိန် သစ်တင် ခဲ့ တယ် ။"
@@ -51,10 +65,17 @@ Output : "ဒီ နေ့ ကမ္ဘာ့ စံချိန် သစ်တ
 ```{r, engine='bash', count_lines}
 from seg import segment_sentence
 sentence = "မိုးရွာထားလို့အခန်းထဲမှာစိုထိုင်းထိုင်းဖြစ်နေတယ်"
-segment_sentence(sentence)
+segment_word(sentence)
 ```
 
 Output : "မိုးရွာ ထား လို့ အခန်း ထဲ မှာ စိုထိုင်း ထိုင်း ဖြစ် နေ တယ်"
+
+```{r, engine='bash', count_lines}
+from seg import segment_word
+sentences = "မောက်ချိုက်အရသာလေးက ပေါ့တဲ့ဘက်သွားတော့ အငန်မစားတဲ့သူဆို အတော်ပဲ ဆိုင်ကတမင် အငန်မစားတဲ့သူတွေအဆင်ပြေအောင်လျော့ထားပုံရတယ်"
+segment_word(sentences)
+```
+Output : 'မောက်ချိုက် အရသာလေး က ပေါ့ တဲ့ ဘက် သွား တော့ အငန် မ စား တဲ့ သူ ဆို အတော် ပဲ ဆိုင် ကတမင် အငန် မ စား တဲ့ သူ တွေ အဆင်ပြေ အောင် လျော့ ထား ပုံ ရ တယ်'
 
 
 ## References
