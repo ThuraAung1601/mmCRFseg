@@ -1,10 +1,20 @@
 # mmCRFseg : Myanmar Word Segmentation using Conditional Random Field
 
-Word Segmentation for Myanmar Language using Conditional Random Fields ( with character features )
+Word Segmentation for Myanmar Language using Conditional Random Fields with character tagging - 1 for beginning of sentences and 0 for others.
 
-- Precision: 0.9593931034482759
-- Recall: 0.9539719113451832
-- Accuracy: 0.9800131976345778
+```{r, engine='bash', count_lines}
+ဪ ၊ အခန်း နံပါတ် ၃၀၅ မှာ တည်း လို့ ရ ပါ တယ် ။ အေးအေးဆေးဆေး ရှိ ပါ တယ် ။
+```
+
+```{r, engine='bash', count_lines}
+[('ဪ', 0), ('၊', 1), ('အ', 1), ('ခ', 0), ('န', 0), ('်', 0), ('း', 0), ('န', 1), ('ံ', 0), ('ပ', 0), ('ါ', 0), ('တ', 0), ('်', 0), ('၃', 1), ('၀', 0), ('၅', 0), ('မ', 1), ('ှ', 0), ('ာ', 0), ('တ', 1), ('ည', 0), ('်', 0), ('း', 0), ('လ', 1), ('ိ', 0), ('ု', 0), ('့', 0), ('ရ', 1), ('ပ', 1), ('ါ', 0), ('တ', 1), ('ယ', 0), ('်', 0), ('။', 1), ('အ', 1), ('ေ', 0), ('း', 0), ('အ', 0), ('ေ', 0), ('း', 0), ('ဆ', 0), ('ေ', 0), ('း', 0), ('ဆ', 0), ('ေ', 0), ('း', 0), ('ရ', 1), ('ှ', 0), ('ိ', 0), ('ပ', 1), ('ါ', 0), ('တ', 1), ('ယ', 0), ('်', 0), ('။', 1)]
+```
+
+|                             | Scores       |
+|:---------------------------:|:------------:|
+| Precision                   | 0.959        |
+| Recall                      | 0.953        |
+| Accuracy                    | 0.980        |
 
 It was trained and tested on myPOS corpus version 3.0[1] based on the study of Win Pa Pa et al.[2]. This tool is built just for educational purpose only.
 
