@@ -6,17 +6,17 @@ import argparse
 import pycrfsuite
 
 parser = argparse.ArgumentParser(description='Word Segmentation for Burmese language using CRF model')
-parser.add_argument('-i', '--input', type=str, help='input file', required=False)
-parser.add_argument('-o', '--output', type=str, default='./segmented.txt', help='output file', required=False)
+parser.add_argument('-i', '--input', type=str, help='input file', required=True)
+parser.add_argument('-o', '--output', default='./segmented.txt', help='output file', required=True)
 
 args = parser.parse_args()
 
-inputFile = getattr(args, 'input')
-outFile = getattr(args, 'output')
+filein = getattr(args, 'input')
+fileout = getattr(args, 'output')
 
 #open trained model
 tagger = pycrfsuite.Tagger()
-tagger.open('./model/mm-word-segmentation-300.crfsuite')
+tagger.open('./mm-word-300.crfsuite')
 
 #here sentence is prepared_sentence and i is length of prepared_sentence
 def create_char_features(sentence, i):
@@ -93,9 +93,10 @@ def segment_word(sentence):
     #print(type(sent))
     return complete
 
-def main():    
-	with open(inputFile, encoding='utf-8') as f:
-	  for line in f:
+def main():  
+	outFile=open(fileout,"w")  
+	with open(filein, encoding='utf-8') as inputFile:
+	  for line in inputFile:
 	    l1 = ""
 	    l2 = ""
 	    if len(line)<=5:
