@@ -96,11 +96,11 @@ Output: ကိုရိုနာ ဗိုင်းရပ်စ် ဆို တ
 
 ## References
 
-[1] Zar Zar Hlaing, Ye Kyaw Thu, Myat Myo Nwe Wai, Thepchai Supnithi, Ponrudee Netisopakul, "Myanmar POS resource extension effects on automatic tagging methods", In Proceedings of the 15th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP 2020), Nov 18 to Nov 20, 2020, Bangkok, Thailand, pp. 189-194. [Paper]
+[1] Ye Kyaw Thu, "myPOS (Myanmar Part-of-Speech) Corpus for Myanmar NLP Research and Developments", GitHub Link: https://github.com/ye-kyaw-thu/myPOS
 
 [2] Win Pa Pa, Ye Kyaw Thu, Andrew M. Finch and Eiichiro Sumita. “Word Boundary Identification for Myanmar Text Using Conditional Random Fields.” ICGEC (2015).
 
-[3] myWord: Syllable, Word and Phrase Segmenter for Burmese, Ye Kyaw Thu, Sept 2021, GitHub Link: https://github.com/ye-kyaw-thu/myWord  
+[3] myWord: Syllable, Word, and Phrase Segmenter for Burmese, Ye Kyaw Thu, Sept 2021, GitHub Link: https://github.com/ye-kyaw-thu/myWord  
 
 [4] Myan-word-breaker : Nay Lin Aung, https://github.com/stevenay/myan-word-breaker 
 
