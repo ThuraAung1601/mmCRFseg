@@ -1,4 +1,4 @@
-# mmCRFseg : Myanmar Word Segmentation using Conditional Random Fields
+# mmCRFseg: Myanmar Word Segmentation using Conditional Random Fields
 
 Word Segmentation for Myanmar Language using Conditional Random Fields with character tagging - 1 for beginning of sentences and 0 for others.
 
