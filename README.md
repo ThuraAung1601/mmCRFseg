@@ -108,5 +108,5 @@ Output: ကိုရိုနာ ဗိုင်းရပ်စ် ဆို တ
 
 ## Citation
 ```
-myCRFSeg: Word Segmentation Tool for Myanmar Language using Conditional Random Fields, Thura Aung, July 2022, GitHub Link: https://github.com/ThuraAung1601/mmCRFseg  
+myCRFSeg: Word Segmentation Tool for Myanmar Language using Binary Tagging based Conditional Random Fields, Thura Aung, July 2022, GitHub Link: https://github.com/ThuraAung1601/mmCRFseg  
 ```
