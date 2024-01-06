@@ -16,15 +16,14 @@ Word Segmentation for Myanmar Language using Conditional Random Fields with char
 | Recall                      | 0.953        |
 | Accuracy                    | 0.980        |
 
-It was trained and tested on myPOS corpus version 3.0[1] based on the study of Win Pa Pa et al.[2]. 
+It was trained and tested on myPOS corpus version 3.0[1]. Win Pa Pa et.al [2] also studied the CRF approach but in this tool, we used different feature sets for better segmentation results.
 
 ## Other useful text segmentation tools for Myanmar Langauge
-- myWord[3] : syllable, word, sub_word and phrase segmenter for Burmese <br />
-( Highly recommend : **most accurate because of its large dictionary sizes, different approaches for different tokens units** )
+- myWord[3]: syllable, word, sub_word and phrase segmenter for Burmese <br />
 
-- Myan-word-breaker[4] : Statistical approach based word segmentation
+- Myan-word-breaker[4]: Statistical approach based word segmentation
 
-- pyidaungsu[5] : Python text processing library for Myanmar language <br />
+- pyidaungsu[5]: Python text processing library for Myanmar language <br />
 ( Many future works and still under development. It also used CRF model for word segmentation. )
 
 ## Download repo
@@ -102,9 +101,9 @@ Output: ကိုရိုနာ ဗိုင်းရပ်စ် ဆို တ
 
 [3] myWord: Syllable, Word, and Phrase Segmenter for Burmese, Ye Kyaw Thu, Sept 2021, GitHub Link: https://github.com/ye-kyaw-thu/myWord  
 
-[4] Myan-word-breaker : Nay Lin Aung, https://github.com/stevenay/myan-word-breaker 
+[4] Myan-word-breaker: Nay Lin Aung, Github, Link: https://github.com/stevenay/myan-word-breaker 
 
-[5] pyidaungsu : Kaung Htet San : https://github.com/kaunghtetsan275/pyidaungsu
+[5] pyidaungsu: Kaung Htet San, Github, Link: https://github.com/kaunghtetsan275/pyidaungsu
 
 ## Citation
 ```
