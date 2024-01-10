@@ -24,7 +24,6 @@ It was trained and tested on myPOS corpus version 3.0[1] and additional data col
 - Myan-word-breaker[4]: Statistical approach based word segmentation
 
 - pyidaungsu[5]: Python text processing library for Myanmar language <br />
-( Many future works and still under development. It also used CRF model for word segmentation. )
 
 ## Download repo
 
