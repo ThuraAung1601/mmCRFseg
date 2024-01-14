@@ -19,7 +19,10 @@ Word Segmentation for Myanmar Language using Conditional Random Fields with char
 It was trained and tested on myPOS corpus version 3.0[1] and additional data collected from the internet and other Open resources. Win Pa Pa et.al [2] also studied the CRF approach but in this tool, we used different feature sets for better segmentation results.
 
 ## Other useful text segmentation tools for Myanmar Langauge
-- myWord[3]: syllable, word, sub_word and phrase segmenter for Burmese <br />
+- myWord[3]: syllable, word, sub_word and phrase segmenter for Burmese
+  - Regex-based for Syllable
+  - Dictionary-based for Word
+  - Unsupervised learning based for Phrase <br />
 
 - Myan-word-breaker[4]: Statistical approach based word segmentation
 
