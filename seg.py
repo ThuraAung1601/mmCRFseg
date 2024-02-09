@@ -16,7 +16,7 @@ fileout = getattr(args, 'output')
 
 #open trained model
 tagger = pycrfsuite.Tagger()
-tagger.open('./model/mm-word-300.crfsuite')
+tagger.open('./model/mm-word-segmentation-300.crfsuite')
 
 #here sentence is prepared_sentence and i is length of prepared_sentence
 def create_char_features(sentence, i):
